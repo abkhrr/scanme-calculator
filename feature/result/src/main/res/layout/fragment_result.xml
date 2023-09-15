@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        tools:context=".feature.fragments.result.ResultFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.abkhrr.libs.toolbar.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <View
+                    android:id="@+id/toolbarDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/grayWhite"
+                    app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+                <ImageView
+                    android:id="@+id/image_view_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/space_x55"
+                    app:layout_constraintTop_toBottomOf="@+id/toolbarDivider"
+                    app:layout_constraintBottom_toTopOf="@+id/btnRecognizeText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:contentDescription="@string/selected_image"
+                    android:layout_marginTop="@dimen/space_x2"
+                    tools:src="@drawable/img_placeholder"/>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRecognizeText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/image_view_result"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="@dimen/space_x5"
+                    android:layout_marginHorizontal="@dimen/space_x4"
+                    app:cornerRadius="@dimen/space_x2"
+                    android:text="Make Sum"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_result_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/btnRecognizeText"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:padding="@dimen/space_x3"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="@dimen/space_x3"
+                    android:textSize="18sp"
+                    tools:text="Result" />
+
+                <View
+                    android:id="@+id/titleDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/grayWhiteDarker"
+                    android:layout_marginHorizontal="@dimen/space_x3"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_result_title" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tv_result_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_result_title"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintBottom_toTopOf="@+id/btnStartOver"
+                    android:padding="@dimen/space_x3"
+                    tools:text="Based on your question 1+1, the result is 1 + 1 = 2" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnStartOver"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginVertical="@dimen/space_x3"
+                    android:layout_marginHorizontal="@dimen/space_x4"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_result_text"
+                    app:cornerRadius="@dimen/space_x2"
+                    android:visibility="invisible"
+                    android:text="Start Over"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

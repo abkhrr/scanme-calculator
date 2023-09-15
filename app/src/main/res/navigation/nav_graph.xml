@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentHome">
+
+    <fragment
+        android:id="@+id/fragmentHome"
+        android:name="com.abkhrr.scanme.feature.fragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/to_camera"
+            app:destination="@+id/fragmentCamera" />
+
+        <action
+            android:id="@+id/to_result"
+            app:destination="@+id/fragmentResult" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentCamera"
+        android:name="com.abkhrr.builtincamera.CameraFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_camera">
+
+        <action
+            android:id="@+id/to_result"
+            app:destination="@+id/fragmentResult" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentResult"
+        android:name="com.abkhrr.result.ResultFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_result">
+
+        <argument
+            android:name="uri"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/back_to_main"
+            app:destination="@+id/fragmentHome" />
+
+    </fragment>
+
+</navigation>

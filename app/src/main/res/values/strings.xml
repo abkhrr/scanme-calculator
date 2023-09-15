@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Scanme! Calculator</string>
+    <string name="scanner">Scanner</string>
+    <string name="intro">Hi There, To get started please click button below. You can start by <b>choosing file from your devices</b>>, or <b>Capture new image</b> to get sum values.</string>
+    <string name="select_image">Select Image</string>
+    <string name="open_camera">Open Camera</string>
+    <string name="please_select_option_below">Please Select Option Below:</string>
+    <string name="grapple">bottomsheet_grapple_icon</string>
+    <string name="capture">Capture</string>
+    <string name="selected_image">Selected Image</string>
+    <string name="result_message">Based on your question %s the result is: %s</string>
+    <string name="result_error">Failed to recognize text due to %s</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFBB86FC</color>
+    <color name="toolbarColor">#6419AE</color>
+    <color name="statusBarColor">#551693</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#1A1A1A</color>
+    <color name="grayWhite">#C6F6F6F6</color>
+    <color name="grayWhiteDarker">#99EFEFEF</color>
+    <color name="blueWhiteForums">#ebf2f7</color>
+    <color name="redWhiteForums">#F7EBEB</color>
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="selected_image">Selected Image</string>
+    <string name="result_message">Based on your question %s the result is: %s</string>
+    <string name="result_error">Failed to recognize text due to %s</string>
+</resources>
